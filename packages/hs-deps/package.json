@@ -1,0 +1,17 @@
+{
+  "name": "hs-deps",
+  "version": "0.0.0",
+  "main": "n/a",
+  "license": "MIT",
+  "bin": {
+    "deps": "bin.js"
+  },
+  "dependencies": {
+    "commander": "^2.11.0"
+  },
+  "files": [
+    "package.json",
+    "bin.js",
+    "README.md"
+  ]
+}
