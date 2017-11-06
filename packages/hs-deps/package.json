@@ -2,6 +2,9 @@
   "name": "hs-deps",
   "version": "0.0.1",
   "main": "n/a",
+  "repository": "haishanh/hsjs",
+  "homepage": "https://github.com/haishanh/hsjs/tree/master/packages/hs-deps",
+  "author": "Haishan <haishanhan@gmail.com>",
   "license": "MIT",
   "bin": {
     "deps": "bin.js"
