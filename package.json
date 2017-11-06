@@ -2,6 +2,9 @@
   "name": "hsjs",
   "version": "0.0.0",
   "main": "index.js",
+  "scripts": {
+    "publish": "lerna publish"
+  },
   "repository": "git@github.com:haishanh/hsjs.git",
   "author": "Haishan <hanhaishan1989@gmail.com>",
   "license": "MIT",
