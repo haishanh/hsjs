@@ -33,9 +33,10 @@ function render(str) {
 
   autolinkHeaders(astMarkdown);
   highlight(astMarkdown);
-  const hastBody = toHAST(astMarkdown);
 
-  const body = hastToHTML(hastBody);
+  const hastBody = toHAST(astMarkdown, { allowDangerousHTML: true });
+
+  const body = hastToHTML(hastBody, { allowDangerousHTML: true });
   return { toc, body };
 }
 

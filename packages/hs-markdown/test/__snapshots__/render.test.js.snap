@@ -46,6 +46,9 @@ Object {
 exports[`model highlight 1`] = `
 Object {
   "body": "<h1 id=\\"one\\"><a href=\\"#one\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>one</h1>
+<div class=\\"highlight\\">
+      <pre class=\\"language-js\\"><code>console<span class=\\"token punctuation\\">.</span><span class=\\"token function\\">log</span><span class=\\"token punctuation\\">(</span><span class=\\"token string\\">\\"test\\"</span><span class=\\"token punctuation\\">)</span></code></pre>
+      </div>
 <h2 id=\\"two\\"><a href=\\"#two\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>two</h2>",
   "toc": "<ul>
 <li>
