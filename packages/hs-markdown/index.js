@@ -24,13 +24,17 @@ const parser = unified().use(markdown, markdownOpts);
 function render(str) {
   const astMarkdown = parser.parse(str);
   const parsedToc = parseToc(astMarkdown);
-  const hastToc = toHAST(parsedToc.map);
+
+  let toc = null;
+  if (parsedToc.map) {
+    const hastToc = toHAST(parsedToc.map);
+    toc = hastToHTML(hastToc);
+  }
 
   autolinkHeaders(astMarkdown);
   highlight(astMarkdown);
   const hastBody = toHAST(astMarkdown);
 
-  const toc = hastToHTML(hastToc);
   const body = hastToHTML(hastBody);
   return { toc, body };
 }

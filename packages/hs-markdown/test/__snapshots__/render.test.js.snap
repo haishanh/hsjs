@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`model all space string 1`] = `
+Object {
+  "body": "",
+  "toc": null,
+}
+`;
+
+exports[`model empty string 1`] = `
+Object {
+  "body": "",
+  "toc": null,
+}
+`;
+
+exports[`model headings 1`] = `
+Object {
+  "body": "<h1 id=\\"one\\"><a href=\\"#one\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>one</h1>
+<h2 id=\\"two0\\"><a href=\\"#two0\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>two0</h2>
+<h3 id=\\"three0\\"><a href=\\"#three0\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>three0</h3>
+<h2 id=\\"two1\\"><a href=\\"#two1\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>two1</h2>
+<h3 id=\\"three1\\"><a href=\\"#three1\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>three1</h3>",
+  "toc": "<ul>
+<li>
+<p><a href=\\"#one\\">one</a></p>
+<ul>
+<li>
+<p><a href=\\"#two0\\">two0</a></p>
+<ul>
+<li><a href=\\"#three0\\">three0</a></li>
+</ul>
+</li>
+<li>
+<p><a href=\\"#two1\\">two1</a></p>
+<ul>
+<li><a href=\\"#three1\\">three1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>",
+}
+`;
+
+exports[`model highlight 1`] = `
+Object {
+  "body": "<h1 id=\\"one\\"><a href=\\"#one\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>one</h1>
+<h2 id=\\"two\\"><a href=\\"#two\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>two</h2>",
+  "toc": "<ul>
+<li>
+<p><a href=\\"#one\\">one</a></p>
+<ul>
+<li><a href=\\"#two\\">two</a></li>
+</ul>
+</li>
+</ul>",
+}
+`;
+
+exports[`model simple string 1`] = `
+Object {
+  "body": "<p>hello</p>",
+  "toc": null,
+}
+`;

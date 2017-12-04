@@ -2,6 +2,9 @@
   "name": "hs-markdown",
   "version": "0.0.1",
   "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
   "repository": "haishanh/hsjs",
   "homepage": "https://github.com/haishanh/hsjs/tree/master/packages/hs-markdown",
   "author": "Haishan <haishanhan@gmail.com>",
@@ -24,5 +27,8 @@
     "highlight.js",
     "lang.json",
     "package.json"
-  ]
+  ],
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
 }
