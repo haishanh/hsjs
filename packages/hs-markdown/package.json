@@ -3,7 +3,8 @@
   "version": "0.0.3",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lang": "node scripts/getLang.js"
   },
   "repository": "haishanh/hsjs",
   "homepage": "https://github.com/haishanh/hsjs/tree/master/packages/hs-markdown",
