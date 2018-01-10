@@ -1,0 +1,26 @@
+{
+  "name": "hs-with-retry",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "haishanh/hsjs",
+  "homepage": "https://github.com/haishanh/hsjs/tree/master/packages/hs-with-retry",
+  "author": "Haishan <haishanhan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.js test",
+    "test": "NODE_ENV=test jest",
+    "coverage": "NODE_ENV=test jest --coverage"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "jest": "^22.0.5",
+    "should": "^13.2.0",
+    "sinon": "^4.1.4"
+  },
+  "files": [
+    "package.json",
+    "index.js",
+    "README.md"
+  ]
+}
