@@ -36,6 +36,18 @@ describe('withRetry', () => {
     ret.should.equal('123');
   });
 
+  it('should work with synchronous operation', async () => {
+    const callback = sinon.spy();
+    function loremSyncOperation() {
+      callback();
+      return '123';
+    }
+    const w = withRetry({ attemptsTotal: 10, firstRetryDelay: 10 });
+    const ret = await w(loremSyncOperation);
+    callback.callCount.should.equal(1);
+    ret.should.equal('123');
+  });
+
   it('should throw correct error', async () => {
     const callback = sinon.spy();
     async function loremAsyncOperation() {
