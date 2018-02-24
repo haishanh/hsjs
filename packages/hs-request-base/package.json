@@ -1,0 +1,21 @@
+{
+  "name": "hs-request-base",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "haishanh/hsjs",
+  "homepage": "https://github.com/haishanh/hsjs/tree/master/packages/hs-request-base",
+  "author": "Haishan <haishanhan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint *.js test",
+    "test": "NODE_ENV=test jest",
+    "coverage": "NODE_ENV=test jest --coverage"
+  },
+  "files": ["package.json", "index.js", "README.md"],
+  "dependencies": {
+    "node-fetch": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  }
+}
