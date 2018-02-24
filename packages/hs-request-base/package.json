@@ -1,6 +1,6 @@
 {
   "name": "hs-request-base",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "repository": "haishanh/hsjs",
   "homepage": "https://github.com/haishanh/hsjs/tree/master/packages/hs-request-base",
@@ -11,7 +11,11 @@
     "test": "NODE_ENV=test jest",
     "coverage": "NODE_ENV=test jest --coverage"
   },
-  "files": ["package.json", "index.js", "README.md"],
+  "files": [
+    "package.json",
+    "index.js",
+    "README.md"
+  ],
   "dependencies": {
     "node-fetch": "^2.0.0"
   },
