@@ -126,4 +126,28 @@ describe('withRetry', () => {
     count.should.equal(5);
     callback.callCount.should.equal(1);
   });
+
+  it('shouldGiveUp should take effect', async () => {
+    const callback = sinon.spy();
+    let count = 0;
+    async function loremAsyncOperation() {
+      count++;
+      if (count < 5) throw new Error('whatever');
+      if (count === 5) throw new Error('foo');
+      callback();
+      return '123';
+    }
+    global.setTimeout = fn => fn();
+    cleanups.push(() => (global.setTimeout = setTimeoutOrig));
+    const w = withRetry({ attemptsTotal: 10, firstRetryDelay: 10, shouldGiveUp: err => err.message === 'foo' });
+    let ret;
+    try {
+      ret = await w(loremAsyncOperation);
+    } catch (err) {
+      // ignore
+    }
+    count.should.equal(5);
+    should(ret).be.undefined();
+    callback.callCount.should.equal(0);
+  });
 });

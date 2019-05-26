@@ -9,8 +9,13 @@ function sleep(t) {
  *
  * @param {number} attemptsTotal
  * @param {number} firstRetryDelay - ms as unit
+ * @param {function} shouldGiveUp - takes error as argument and return a boolean
  */
-function withRetry({ attemptsTotal = 3, firstRetryDelay = 0 } = {}) {
+function withRetry({
+  attemptsTotal = 3,
+  firstRetryDelay = 0,
+  shouldGiveUp = () => false
+} = {}) {
   let lastError;
   let attemptsMade = 0;
   const run = async fn => {
@@ -24,6 +29,9 @@ function withRetry({ attemptsTotal = 3, firstRetryDelay = 0 } = {}) {
       lastError = err;
     }
     attemptsMade++;
+    if (shouldGiveUp(lastError)) {
+      throw lastError;
+    }
     if (attemptsMade >= attemptsTotal) {
       throw lastError;
     }
