@@ -10,7 +10,7 @@
     "deps": "bin.js"
   },
   "dependencies": {
-    "commander": "^2.11.0",
+    "commander": "^4.0.1",
     "escape-string-regexp": "^2.0.0"
   },
   "files": [

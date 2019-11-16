@@ -16,11 +16,11 @@ Object {
 
 exports[`model headings 1`] = `
 Object {
-  "body": "<h1 id=\\"one\\"><a href=\\"#one\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>one</h1>
-<h2 id=\\"two0\\"><a href=\\"#two0\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>two0</h2>
-<h3 id=\\"three0\\"><a href=\\"#three0\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>three0</h3>
-<h2 id=\\"two1\\"><a href=\\"#two1\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>two1</h2>
-<h3 id=\\"three1\\"><a href=\\"#three1\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>three1</h3>",
+  "body": "<h1 id=\\"one\\"><a href=\\"#one\\" aria-hidden class=\\"anchor\\">#</a>one</h1>
+<h2 id=\\"two0\\"><a href=\\"#two0\\" aria-hidden class=\\"anchor\\">#</a>two0</h2>
+<h3 id=\\"three0\\"><a href=\\"#three0\\" aria-hidden class=\\"anchor\\">#</a>three0</h3>
+<h2 id=\\"two1\\"><a href=\\"#two1\\" aria-hidden class=\\"anchor\\">#</a>two1</h2>
+<h3 id=\\"three1\\"><a href=\\"#three1\\" aria-hidden class=\\"anchor\\">#</a>three1</h3>",
   "toc": "<ul>
 <li>
 <p><a href=\\"#one\\">one</a></p>
@@ -45,11 +45,11 @@ Object {
 
 exports[`model highlight 1`] = `
 Object {
-  "body": "<h1 id=\\"one\\"><a href=\\"#one\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>one</h1>
+  "body": "<h1 id=\\"one\\"><a href=\\"#one\\" aria-hidden class=\\"anchor\\">#</a>one</h1>
 <div class=\\"highlight\\">
       <pre class=\\"language-js\\"><code>console<span class=\\"token punctuation\\">.</span><span class=\\"token function\\">log</span><span class=\\"token punctuation\\">(</span><span class=\\"token string\\">\\"test\\"</span><span class=\\"token punctuation\\">)</span></code></pre>
       </div>
-<h2 id=\\"two\\"><a href=\\"#two\\" aria-hidden=\\"true\\" class=\\"anchor\\">#</a>two</h2>",
+<h2 id=\\"two\\"><a href=\\"#two\\" aria-hidden class=\\"anchor\\">#</a>two</h2>",
   "toc": "<ul>
 <li>
 <p><a href=\\"#one\\">one</a></p>

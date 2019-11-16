@@ -12,15 +12,15 @@
   "license": "MIT",
   "dependencies": {
     "github-slugger": "^1.2.0",
-    "hast-util-to-html": "^3.1.0",
-    "mdast-util-to-hast": "^2.5.0",
+    "hast-util-to-html": "^6.0.2",
+    "mdast-util-to-hast": "^7.0.0",
     "mdast-util-to-string": "^1.0.4",
-    "mdast-util-toc": "^2.0.1",
+    "mdast-util-toc": "^5.0.0",
     "prismjs": "^1.8.4",
-    "remark-parse": "^4.0.0",
-    "remark-toc": "^4.0.1",
-    "unified": "^6.1.6",
-    "unist-util-visit": "^1.2.0"
+    "remark-parse": "^7.0.2",
+    "remark-toc": "^6.0.0",
+    "unified": "^8.4.2",
+    "unist-util-visit": "^2.0.1"
   },
   "files": [
     "index.js",
@@ -30,6 +30,6 @@
     "package.json"
   ],
   "devDependencies": {
-    "jest": "^21.2.1"
+    "jest": "^24.9.0"
   }
 }
