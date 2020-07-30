@@ -12,14 +12,14 @@
   "license": "MIT",
   "dependencies": {
     "github-slugger": "^1.2.0",
-    "hast-util-to-html": "^6.0.2",
-    "mdast-util-to-hast": "^7.0.0",
+    "hast-util-to-html": "^7.1.1",
+    "mdast-util-to-hast": "^9.1.0",
     "mdast-util-to-string": "^1.0.4",
     "mdast-util-toc": "^5.0.0",
     "prismjs": "^1.8.4",
-    "remark-parse": "^7.0.2",
+    "remark-parse": "^8.0.3",
     "remark-toc": "^6.0.0",
-    "unified": "^8.4.2",
+    "unified": "^9.1.0",
     "unist-util-visit": "^2.0.1"
   },
   "files": [
@@ -30,6 +30,7 @@
     "package.json"
   ],
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^26.2.1",
+    "jest-circus": "^26.2.1"
   }
 }

@@ -2,7 +2,6 @@
 
 const unified = require('unified');
 const markdown = require('remark-parse');
-const remarkToc = require('remark-toc');
 const parseToc = require('mdast-util-toc');
 const toHAST = require('mdast-util-to-hast');
 const hastToHTML = require('hast-util-to-html');
@@ -34,9 +33,9 @@ function render(str) {
   autolinkHeaders(astMarkdown);
   highlight(astMarkdown);
 
-  const hastBody = toHAST(astMarkdown, { allowDangerousHTML: true });
+  const hastBody = toHAST(astMarkdown, { allowDangerousHtml: true });
 
-  const body = hastToHTML(hastBody, { allowDangerousHTML: true });
+  const body = hastToHTML(hastBody, { allowDangerousHtml: true });
   return { toc, body };
 }
 
