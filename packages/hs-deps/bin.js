@@ -3,7 +3,6 @@
 
 const fs = require('fs');
 const prog = require('commander');
-const escapeStringRegexp = require('escape-string-regexp');
 const pkg = require('./package.json');
 
 function collect(value, previous) {
@@ -32,11 +31,11 @@ const { file = 'package.json', include, exclude, pkgVersion } = prog;
 
 const includeRegExps = [];
 for (let i = 0; i < include.length; i++) {
-  includeRegExps.push(new RegExp(escapeStringRegexp(include[i])));
+  includeRegExps.push(new RegExp(include[i]));
 }
 const excludeRegExps = [];
 for (let i = 0; i < exclude.length; i++) {
-  excludeRegExps.push(new RegExp(escapeStringRegexp(exclude[i])));
+  excludeRegExps.push(new RegExp(exclude[i]));
 }
 
 const content = fs.readFileSync(file);
