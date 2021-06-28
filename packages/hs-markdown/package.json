@@ -16,7 +16,7 @@
     "mdast-util-to-hast": "^2.5.0",
     "mdast-util-to-string": "^1.0.4",
     "mdast-util-toc": "^2.0.1",
-    "prismjs": "^1.8.4",
+    "prismjs": "^1.24.0",
     "remark-parse": "^4.0.0",
     "remark-toc": "^4.0.1",
     "unified": "^6.1.6",
