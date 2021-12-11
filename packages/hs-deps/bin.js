@@ -2,34 +2,33 @@
 'use strict';
 
 const fs = require('fs');
-const prog = require('commander');
+const sade = require('sade');
 const pkg = require('./package.json');
+
+const prog = sade('deps', true);
+
+let ignorePats = [];
 
 prog
   .version(pkg.version)
-  .option('-f, --file <filename>', 'package.json filepath')
-  .option(
-    '-i, --ignore <pattern>',
-    'pattern of package name to ignore, e.g. "webpack*"'
-  )
+  .option('-f, --file', 'filepath of package.json', 'package.json')
+  .option('-i, --ignore', 'pattern of package name to ignore, e.g. "webpack*"')
+  .action(handler)
   .parse(process.argv);
 
-const { file = 'package.json' } = prog;
-
-let ignorePats = [];
-if (prog.ignore) {
-  // just like bash shell expansion
-  ignorePats = prog.ignore
-    .split(',')
-    .map(a => a.trim().replace('*', '[\\SS]*'))
-    .map(a => new RegExp('^' + a));
+function handler(opts) {
+  if (opts.ignore) {
+    // just like bash shell expansion
+    ignorePats = opts.ignore
+      .split(',')
+      .map((a) => a.trim().replace('*', '[\\SS]*'))
+      .map((a) => new RegExp('^' + a));
+  }
+  const content = fs.readFileSync(opts.file);
+  const json = JSON.parse(content);
+  printIt('yarn add', 'dependencies', json);
+  printIt('yarn add -D', 'devDependencies', json);
 }
-
-const content = fs.readFileSync(file);
-const json = JSON.parse(content);
-
-// const d = json.dependencies;
-const dd = json.devDependencies;
 
 function shouldKeyIgnore(key) {
   if (ignorePats.length === 0) return false;
@@ -61,6 +60,3 @@ function printIt(prefix, name, json) {
   if (s === prefix) s = '# NONE';
   console.log(s);
 }
-
-printIt('yarn add', 'dependencies', json)
-printIt('yarn add -D', 'devDependencies', json)

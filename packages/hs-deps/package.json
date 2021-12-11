@@ -1,7 +1,6 @@
 {
   "name": "hs-deps",
-  "version": "0.0.2",
-  "main": "n/a",
+  "version": "0.0.3",
   "repository": "haishanh/hsjs",
   "homepage": "https://github.com/haishanh/hsjs/tree/master/packages/hs-deps",
   "author": "Haishan <haishanhan@gmail.com>",
@@ -10,7 +9,10 @@
     "deps": "bin.js"
   },
   "dependencies": {
-    "commander": "^2.11.0"
+    "sade": "1.7.4"
+  },
+  "prettier": {
+    "singleQuote": true
   },
   "files": [
     "package.json",

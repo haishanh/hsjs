@@ -1,18 +1,19 @@
 {
   "name": "hsjs",
   "version": "0.0.0",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "publish": "lerna publish"
   },
   "repository": "git@github.com:haishanh/hsjs.git",
-  "author": "Haishan <hanhaishan1989@gmail.com>",
+  "author": "Haishan <haishanhan@gmail.com> (https://haishan.me)",
   "license": "MIT",
-  "private": true,
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^2.5.1"
+    "lerna": "^2.5.1",
+    "prettier": "2.5.1",
+    "turbo": "1.0.6"
   }
 }
